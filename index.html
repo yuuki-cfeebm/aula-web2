@@ -1,1 +1,69 @@
-aa
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Aleatória</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 300px;
+      backdrop-filter: blur(10px);
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ffcc00;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #ffaa00;
+    }
+  </style>
+</head>
+<body>
+
+<header>✨ Página Aleatória ✨</header>
+
+<div class="card">
+  <p id="texto">Clique no botão para mudar o texto!</p>
+  <button onclick="mudarTexto()">Mudar</button>
+</div>
+
+<script>
+  function mudarTexto() {
+    const frases = [
+      "Você é incrível 😎",
+      "Hoje é um ótimo dia 🚀",
+      "Continue aprendendo 💡",
+      "Código é poder 💻",
+      "Nunca desista 🔥"
+    ];
+
+    const aleatorio = Math.floor(Math.random() * frases.length);
+    document.getElementById("texto").innerText = frases[aleatorio];
+  }
+</script>
+
+</body>
+</html>
